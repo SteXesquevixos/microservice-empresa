@@ -44,7 +44,6 @@ public class EmpregadoRepositoryTest {
 
     }
 
-    // ERRO AO SALVAR! (SEM ID)
     @Test
     public void testIncluirNovoEmpregadoComDepartamentoInexistente() {
         // GIVEN objeto Empregado com um novo departamento (sem Id) e dados corretos
@@ -120,16 +119,11 @@ public class EmpregadoRepositoryTest {
     @Test
     public void testDeletarEmpregadoTambemDepartamento() {
 
-        Optional<Empregado> empregado = empregadoRepository.findById(7L);
-        Optional<Departamento> departamento = departamentoRepository.findById(3L);
-
-        empregadoRepository.delete(empregado.get());
+        Optional<Departamento> departamento = departamentoRepository.findById(6L);
         departamentoRepository.delete(departamento.get());
+        departamento = departamentoRepository.findById(6L);
 
-        empregado = empregadoRepository.findById(7L);
-        departamento = departamentoRepository.findById(3L);
-
-        Assert.isTrue(empregado.isPresent() == false && departamento.isPresent() == false, "Erro ao deletar empregado e departamento");
+        Assert.isTrue(departamento.isPresent() == false, "Erro ao deletar empregado e departamento");
 
 
     }

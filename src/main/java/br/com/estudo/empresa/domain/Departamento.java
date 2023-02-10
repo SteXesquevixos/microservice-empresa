@@ -25,7 +25,7 @@ public class Departamento {
 
     private Double valorOrcamento;
 
-    @OneToMany(mappedBy = "departamento", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "departamento", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Empregado> empregados;
 
 }
