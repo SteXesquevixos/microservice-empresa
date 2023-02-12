@@ -16,6 +16,6 @@ public class EmpregadoRequestDto {
 
     private Double salario;
 
-    private Departamento departamento;
+//    private DepartamentoRequestDto departamento;
 
 }

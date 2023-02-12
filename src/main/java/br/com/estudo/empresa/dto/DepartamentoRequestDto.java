@@ -18,6 +18,4 @@ public class DepartamentoRequestDto {
 
     private Double valorOrcamento;
 
-    private List<Empregado> empregados;
-
 }

@@ -48,15 +48,15 @@ public class EmpregadoRepositoryTest {
     public void testIncluirNovoEmpregadoComDepartamentoInexistente() {
         // GIVEN objeto Empregado com um novo departamento (sem Id) e dados corretos
         Departamento departamento = Departamento.builder()
-                .nome("Tecnologia")
-                .sigla("TI")
-                .valorOrcamento(15000.0)
+                .nome("Medicina")
+                .sigla("DM")
+                .valorOrcamento(20000.0)
                 .build();
 
         Empregado empregado = Empregado.builder()
-                .nome("Wanderson")
-                .cargo("Desenvolvedor")
-                .salario(10000.0)
+                .nome("Caroline")
+                .cargo("Biomédica")
+                .salario(8000.0)
                 .departamento(departamento)
                 .build();
 
